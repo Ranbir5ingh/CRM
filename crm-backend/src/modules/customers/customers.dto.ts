@@ -26,6 +26,22 @@ export class CustomerDto {
   profile?: string;
 
   @ApiPropertyOptional({
+    example: '1234-5678-9012',
+    description: 'Aadhar number of the customer',
+  })
+  @IsOptional()
+  @IsString()
+  aadharNumber?: string;
+
+  @ApiPropertyOptional({
+    example: 'DL-1234567890',
+    description: 'Driving license number of the customer',
+  })
+  @IsOptional()
+  @IsString()
+  licenseNumber?: string;
+
+  @ApiPropertyOptional({
     example: 'john',
     description: 'First name of the customer',
   })

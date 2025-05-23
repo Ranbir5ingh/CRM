@@ -26,6 +26,8 @@ interface Customer {
   date_of_birth: string;
   address: string;
   gender: string;
+  aadharNumber?: string;
+  licenseNumber?: string;
   status: "ACTIVE" | "INACTIVE" | "BLACKLISTED";
   [key: string]: any; // For any additional properties
 }
@@ -59,6 +61,7 @@ interface Rental {
   advance: string;
   status: "CREATED" | "COMPLETED" | "INPROGRESS" | "CANCELLED";
 }
+
 
 export const CustomerDataCol = (refetch: () => void): ColumnDef<Customer>[] => {
   return [
@@ -244,7 +247,11 @@ export const CustomerDataCol = (refetch: () => void): ColumnDef<Customer>[] => {
                   title="Update Customer"
                   submitLabel="Update"
                   onSubmit={handleEditCustomers}
-                  initialData={row.original}
+                  initialData={{
+                    ...row.original,
+                    profile: undefined,
+                    image: row.original.profile || "",
+                  }}
                 />
               </DialogContent>
             </Dialog>

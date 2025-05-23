@@ -56,6 +56,12 @@ export function ViewEmployeeDialog({ customerId }: ViewCustomerDialogProps) {
                 ? `${new Date().getFullYear() - new Date(data.date_of_birth).getFullYear()}yr, `
                 : ""}{data?.gender || ""}
             </p>
+            <p className="text-base md:text-lg">
+              Aadhar Number: <span className="font-bold">{data?.aadharNumber || "N/A"}</span>
+            </p>
+            <p className="text-base md:text-lg">
+              License Number: <span className="font-bold">{data?.licenseNumber || "N/A"}</span>
+            </p>
           </div>
         </div>
         <div className="space-y-3 w-full md:w-auto md:text-right mt-4 md:mt-0">

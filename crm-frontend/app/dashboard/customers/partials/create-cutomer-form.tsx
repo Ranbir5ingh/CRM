@@ -190,6 +190,44 @@ function CreateCustomerForm({
                   </FormItem>
                 )}
               />
+              <FormField
+                control={form.control}
+                name="aadharNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-bold text-lg">
+                      Aadhar Number
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Enter Aadhar Number"
+                        {...field}
+                        className="bg-gray-100"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="licenseNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-bold text-lg">
+                      License Number
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Enter License Number"
+                        {...field}
+                        className="bg-gray-100"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <FormField
                 key="phone"
