@@ -26,7 +26,7 @@ interface Customer {
   date_of_birth: string;
   address: string;
   gender: string;
-  aadharNumber?: string;
+  aadharNumber?: number;
   licenseNumber?: string;
   status: "ACTIVE" | "INACTIVE" | "BLACKLISTED";
   [key: string]: any; // For any additional properties
@@ -247,11 +247,7 @@ export const CustomerDataCol = (refetch: () => void): ColumnDef<Customer>[] => {
                   title="Update Customer"
                   submitLabel="Update"
                   onSubmit={handleEditCustomers}
-                  initialData={{
-                    ...row.original,
-                    profile: undefined,
-                    image: row.original.profile || "",
-                  }}
+                  initialData={row.original}
                 />
               </DialogContent>
             </Dialog>

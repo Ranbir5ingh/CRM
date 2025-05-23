@@ -198,13 +198,14 @@ function CreateCustomerForm({
                     <FormLabel className="font-bold text-lg">
                       Aadhar Number
                     </FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter Aadhar Number"
-                        {...field}
-                        className="bg-gray-100"
-                      />
-                    </FormControl>
+              <FormControl>
+                <Input
+                  placeholder="Enter Aadhar Number"
+                  {...field}
+                  type="number"
+                  className="bg-gray-100"
+                />
+              </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}

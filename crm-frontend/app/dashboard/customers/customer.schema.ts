@@ -16,7 +16,7 @@ export const CreateCustomerSchema = z.object({
   aadharFront: z.instanceof(File).optional(),
   aadharBack: z.instanceof(File).optional(),
   drivingLic: z.instanceof(File).optional(),
-  aadharNumber: z.string().optional(),
+  aadharNumber: z.number().optional(),
   licenseNumber: z.string().optional(),
   is_aadhar_verified: z.boolean().optional(),
   is_driving_licence_verified: z.boolean().optional(),

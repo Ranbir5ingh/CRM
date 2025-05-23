@@ -26,12 +26,11 @@ export class CustomerDto {
   profile?: string;
 
   @ApiPropertyOptional({
-    example: '1234-5678-9012',
+    example: 123456789012,
     description: 'Aadhar number of the customer',
   })
   @IsOptional()
-  @IsString()
-  aadharNumber?: string;
+  aadharNumber?: number;
 
   @ApiPropertyOptional({
     example: 'DL-1234567890',
