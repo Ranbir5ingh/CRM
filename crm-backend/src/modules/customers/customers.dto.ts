@@ -30,7 +30,7 @@ export class CustomerDto {
     description: 'Aadhar number of the customer',
   })
   @IsOptional()
-  aadharNumber?: number;
+  aadhar_number?: number;
 
   @ApiPropertyOptional({
     example: 'DL-1234567890',
@@ -38,7 +38,7 @@ export class CustomerDto {
   })
   @IsOptional()
   @IsString()
-  licenseNumber?: string;
+  dl_number?: string;
 
   @ApiPropertyOptional({
     example: 'john',

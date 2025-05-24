@@ -57,10 +57,10 @@ export function ViewEmployeeDialog({ customerId }: ViewCustomerDialogProps) {
                 : ""}{data?.gender || ""}
             </p>
             <p className="text-base md:text-lg">
-              Aadhar Number: <span className="font-bold">{data?.aadharNumber || "N/A"}</span>
+              Aadhar Number: <span className="font-bold">{data?.aadhar_number || "N/A"}</span>
             </p>
             <p className="text-base md:text-lg">
-              License Number: <span className="font-bold">{data?.licenseNumber || "N/A"}</span>
+              License Number: <span className="font-bold">{data?.dl_number || "N/A"}</span>
             </p>
           </div>
         </div>

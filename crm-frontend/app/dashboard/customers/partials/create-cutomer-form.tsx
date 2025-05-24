@@ -118,6 +118,7 @@ function CreateCustomerForm({
           phone: "",
           address: "",
           date_of_birth: minDate.toISOString(),
+          aadhar_number: "",
         },
     mode: "onChange",
   });
@@ -192,7 +193,7 @@ function CreateCustomerForm({
               />
               <FormField
                 control={form.control}
-                name="aadharNumber"
+                name="aadhar_number"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="font-bold text-lg">
@@ -202,7 +203,8 @@ function CreateCustomerForm({
                 <Input
                   placeholder="Enter Aadhar Number"
                   {...field}
-                  type="number"
+                  type="text"
+                  maxLength={12}
                   className="bg-gray-100"
                 />
               </FormControl>
@@ -212,7 +214,7 @@ function CreateCustomerForm({
               />
               <FormField
                 control={form.control}
-                name="licenseNumber"
+                name="dl_number"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="font-bold text-lg">

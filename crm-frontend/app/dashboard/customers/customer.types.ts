@@ -35,7 +35,7 @@ export type CustomerDetail = {
   status: string;
   aadharBack?: string;
   drivingLic?: string;
-  aadharNumber?: number;
-  licenseNumber?: string;
+  aadhar_number?: string;
+  dl_number?: string;
   rentals: RentalDetail[];
 };
